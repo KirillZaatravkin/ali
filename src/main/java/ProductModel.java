@@ -16,7 +16,24 @@ public class ProductModel {
     private String shopURL;
     private String productTitle;
     private String sellerId;
+    private String shopName;
+    private String promotionId;
 
+    public String getShopName() {
+        return shopName;
+    }
+
+    public void setShopName(String shopName) {
+        this.shopName = shopName;
+    }
+
+    public String getPromotionId() {
+        return promotionId;
+    }
+
+    public void setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+    }
 
     public String getProductDetailUrl() {
         return productDetailUrl;

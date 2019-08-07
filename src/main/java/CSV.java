@@ -27,6 +27,8 @@ public class CSV {
                 new Optional(),
                 new Optional(),
                 new Optional(),
+                new Optional(),
+                new Optional(),
                 new Optional()
 
         };
@@ -36,7 +38,7 @@ public class CSV {
     public void createCSVFile(ArrayList<ProductModel> productModels) throws IOException {
         ICsvBeanWriter csvBeanWriter = null;
         csvBeanWriter = new CsvBeanWriter(new FileWriter("target/1.csv"), CsvPreference.STANDARD_PREFERENCE);
-        String[] header = new String[]{"productId", "productImage", "minPrice", "maxPrice", "oriMinPrice", "oriMaxPrice", "discount", "startTime", "endTime", "orders", "shopUrl", "productTitle","sellerId","productDetailUrl"};
+        String[] header = new String[]{"productId", "productImage", "minPrice", "maxPrice", "oriMinPrice", "oriMaxPrice", "discount", "startTime", "endTime", "orders", "shopUrl","shopName", "promotionId", "productTitle","sellerId","productDetailUrl",};
         csvBeanWriter.writeHeader(header);
         for (ProductModel product : productModels) {
             csvBeanWriter.write(product, header, getProcessors());
